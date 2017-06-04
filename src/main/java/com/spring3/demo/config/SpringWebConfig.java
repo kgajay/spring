@@ -30,4 +30,6 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
+
+
 }
