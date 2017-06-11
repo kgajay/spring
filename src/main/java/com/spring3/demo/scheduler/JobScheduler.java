@@ -1,10 +1,8 @@
 package com.spring3.demo.scheduler;
 
-import com.spring3.demo.config.SpringWebConfig;
 import com.spring3.demo.scheduler.jobs.JobA;
 import com.spring3.demo.scheduler.jobs.JobB;
 import com.spring3.demo.scheduler.jobs.JobC;
-import com.spring3.demo.utils.SpringProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
