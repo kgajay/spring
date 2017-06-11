@@ -1,6 +1,7 @@
 package com.spring3.demo.web.service;
 
 import com.spring3.demo.modal.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,8 +22,18 @@ public class UserServiceImpl implements UserService {
 
     private static List<User> users;
 
+    @Autowired
+    private String appName;
+
     static{
         users= populateDummyUsers();
+    }
+
+    // return app name from autowired configuration
+    @Override
+    public String returnAppName() {
+
+        return appName;
     }
 
     @Override

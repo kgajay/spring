@@ -9,6 +9,8 @@ import java.util.List;
  */
 public interface UserService {
 
+    String returnAppName();
+
     User findById(long id);
 
     User findByName(String name);

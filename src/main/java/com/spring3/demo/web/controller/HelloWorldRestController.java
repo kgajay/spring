@@ -2,7 +2,9 @@ package com.spring3.demo.web.controller;
 
 import com.spring3.demo.modal.User;
 import com.spring3.demo.web.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,11 +17,22 @@ import java.util.List;
 /**
  * @author ajay.kg created on 04/06/17.
  */
+@Slf4j
 @RestController
 public class HelloWorldRestController {
 
     @Autowired
     UserService userService;  //Service which will do all data retrieval/manipulation work
+
+    @Value("${spring.app.name}")
+    private String appName = "abcd";
+
+    @RequestMapping(value = "/app", method = RequestMethod.GET)
+    public String getAppName() {
+        log.info("App Name from configuration file: {}", appName);
+        log.info("App Name from autowired annotation : {}", userService.returnAppName());
+        return appName;
+    }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public ResponseEntity<List<User>> listAllUsers() {
