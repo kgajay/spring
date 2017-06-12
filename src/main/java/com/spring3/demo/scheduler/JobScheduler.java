@@ -52,11 +52,11 @@ public class JobScheduler {
         scheduler = schedulerFactory.getScheduler();
 //        scheduler.scheduleJob(sampleJob, triggerA);
 
-        scheduler.scheduleJob(JobBuilder.newJob(JobA.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobACronExpression)).build());
-        scheduler.scheduleJob(JobBuilder.newJob(JobB.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobBCronExpression)).build());
-        scheduler.scheduleJob(JobBuilder.newJob(JobC.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobCCronExpression)).build());
-
-        scheduler.startDelayed(1);
+//        scheduler.scheduleJob(JobBuilder.newJob(JobA.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobACronExpression)).build());
+//        scheduler.scheduleJob(JobBuilder.newJob(JobB.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobBCronExpression)).build());
+//        scheduler.scheduleJob(JobBuilder.newJob(JobC.class).build(), TriggerBuilder.newTrigger().startNow().withSchedule(CronScheduleBuilder.cronSchedule(jobCCronExpression)).build());
+//
+//        scheduler.startDelayed(1);
 
     }
 

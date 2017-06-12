@@ -17,6 +17,8 @@ API:
     4) PUT http://localhost:8080/spring3/user/1
 
     5) POST http://localhost:8080/spring3/user
+    
+    6) GET http://localhost:8080/spring3/app
 
 
 Reference: http://www.mkyong.com/spring3/spring-3-mvc-hello-world-example-annotation/
