@@ -32,6 +32,9 @@ public class StreamJavaMapTest {
         Map<Integer, String> result1 = list.stream().filter(staff -> staff.getSalary().compareTo(new BigDecimal(10000))>0).collect(Collectors.toMap(Staff::getAge, Staff::getName));
         System.out.println("Map result 1 " + result1);
 
+        Map<Integer, Staff> result2 = list.stream().collect(Collectors.toMap(Staff::getAge, Function.identity()));
+        System.out.println("Map result 1 " + result2);
+
         Map<Integer, String> HOSTING = new HashMap<>();
         HOSTING.put(1, "linode.com");
         HOSTING.put(2, "heroku.com");

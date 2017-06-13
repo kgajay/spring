@@ -26,8 +26,5 @@ public class StreamTest2 {
         List<String> strings = staff.stream().map(s -> s.getName()).collect(Collectors.toList());
         System.out.println("Object to list : " + strings);
 
-
-
-
     }
 }
