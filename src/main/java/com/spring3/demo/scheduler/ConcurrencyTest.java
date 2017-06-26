@@ -36,6 +36,7 @@ public class ConcurrencyTest {
             executor.submit(worker);
         }
         executor.shutdown();
+        System.out.println("pool size: " + Runtime.getRuntime().availableProcessors());
         // Wait until all threads are finish
         while (!executor.isTerminated());
 
